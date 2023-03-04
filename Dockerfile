@@ -5,4 +5,4 @@ FROM rockylinux:9
 RUN dnf update -y && dnf install -y rsyslog
 
 # Start rsyslog service
-ENTRYPOINT ["rsyslogd", "-n"]
+ENTRYPOINT ["rsyslogd", "-n", "-f", "/config/rsyslog.conf"]
